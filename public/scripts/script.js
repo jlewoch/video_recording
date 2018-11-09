@@ -110,6 +110,10 @@ const controls = {
   },
   setupDownloadLink: (url, ext, type) => {
     $('#trash').show('slow')
+    $('#setting-btn').hide('slow')
+    $('#rec').hide('slow')
+    $('#cam-btn').hide('slow')
+    $('#snap-btn').hide('slow')
     $('#download-btn')
       .html(`Save ${type}`)
       .prop('href', url)
@@ -142,8 +146,14 @@ const media = {
     $('#rec').show('slow')
     $('#preview-canvas').hide()
     $('#local-video').show()
+    $('#setting-btn').show('slow')
+    $('#snap-btn').show('slow')
+    $('pause').hide('slow')
   },
   backToLiveFromRec: () => {
+    $('pause').hide('slow')
+    $('#setting-btn').show('slow')
+    $('#snap-btn').show('slow')
     $('#cam-btn').show('slow')
     $('#trash').hide('slow')
     $('#rec').show('slow')

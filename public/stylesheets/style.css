@@ -17,9 +17,18 @@ a, button {
     white-space: nowrap;
 }
 
-#local-video, #preview-canvas, #video-recorder, .video {
+#local-video, #video-recorder, .video {
     height: 100%;
     width: 100%;
+}
+
+.video {
+    display: flex;
+    justify-content: center;
+}
+
+#preview-canvas {
+    height: 100%;
 }
 
 #video-recorder, .btn-control, #buttons {
