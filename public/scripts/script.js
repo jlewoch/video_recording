@@ -135,10 +135,18 @@ const media = {
     }
   },
   backToLiveFromSnap: () => {
+    $('#cam-btn').show('slow')
+    $('#trash').hide('slow')
+    $('#download-btn').hide('slow')
+    $('#rec').show('slow')
     $('#preview-canvas').hide()
     $('#local-video').show()
   },
   backToLiveFromRec: () => {
+    $('#cam-btn').show('slow')
+    $('#trash').hide('slow')
+    $('#rec').show('slow')
+    $('#download-btn').hide('slow')
     $('#local-video').prop('srcObject', window.stream).prop('src', null)
   }
 }
@@ -160,16 +168,12 @@ const application = {
       window.recorder.start(500)
     })
 
-    $('#download-btn').click(function (e) {
-      $(this).hide('slow')
-      $('#trash').show('slow')
+    $('#download-btn').click(function () {
       $(this).text().includes('Image')
         ? media.backToLiveFromSnap()
         : media.backToLiveFromRec()
     })
     $('#trash').click(function () {
-      $(this).hide('slow')
-      $('#download-btn').hide('slow')
       $('#download-btn').text().includes('Image')
         ? media.backToLiveFromSnap()
         : media.backToLiveFromRec()
