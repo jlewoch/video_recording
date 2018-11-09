@@ -17,32 +17,34 @@ a, button {
     white-space: nowrap;
 }
 
-.btn-control:hover, a:hover, svg:hover {
+#local-video, #preview-canvas, #video-recorder, .video {
+    height: 100%;
+    width: 100%;
+}
+
+#video-recorder, .btn-control, #buttons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+a:hover, button:hover, svg:hover {
     cursor: pointer;
+    opacity: .75;
 }
 
-#local-video {
-    object-fit: fill;
-    height: 100%;
-    width: 100%;
+svg:hover {
+    fill: #4ab3ff;
+    stroke: #4ab3ff;
 }
 
-#video-recorder {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100%;
-    width: 100%;
+#rec:hover {
+    fill: red;
+    stroke: red;
 }
 
-.video {
-    position: relative;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    width: 100%;
-    height: 100%;
+#fullscreen-btn {
+    border: solid thin white;
 }
 
 #stop-btn, #rec, #pause {
@@ -50,10 +52,7 @@ a, button {
 }
 
 #buttons {
-    display: flex;
-    justify-content: center;
     width: 100%;
-    align-items: center;
 }
 
 #video-controls {
@@ -71,9 +70,7 @@ a, button {
 }
 
 .btn-control {
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    outline: none;
     border: none;
     margin: 10px;
     border-radius: 4px;

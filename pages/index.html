@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="/assets/stylesheets/style.css">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <div id="video-recorder">
+        <div class="video">
+
+            <video autoplay id="local-video"></video>
+            <canvas hidden id="preview-canvas"></canvas>
+
+
+
+
+            <div id="video-controls">
+                <div id='buttons'>
+                    <button id='cam-btn' class="btn-control">Show Cam</button>
+                    <svg id='rec' viewbox='0 0 15 15' height='30' stroke='red' fill='red'>
+                        <circle cx='7.5' cy='7.5' r=7.5 />
+                    </svg>
+                    <svg id='pause' viewbox='0 0 15 15' height='30' stroke='#fff' fill='#fff'>
+                        <rect x='0' y='0' width='5' height='15' />
+                        <rect x='10' y='0' width='5' height='15' />
+                    </svg>
+                    <svg id='play' viewbox='0 0 15 15' height='30' stroke='#fff' fill='#fff'>
+                        <path d='M 0, 0
+                        l 15,7.5
+                            l -15,7.5
+                            l 0, -15' />
+                    </svg>
+                    <svg id='stop-btn' viewbox='0 0 15 15' height='30' stroke='#fff' fill='#fff'>
+                        <rect x='0' y='0' width=15 height='15' />
+                    </svg>
+                    <button id='snap-btn' disabled class="btn-control">Snapshot</button>
+
+                    <svg id='fullscreen-btn' viewBox="0 0 35 35" height='30' stroke='#fff' fill='#fff'>
+                        <path d='M 0, 6.5 l 0,2 l 10,0 l 0, 2 l 5, -3 l -5, -3 l 0, 2 l -10.5, 0' transform='rotate(-45,32.15,18.8)' />
+                        <path d='M 0, 6.5 l 0,2 l 10,0 l 0, 2 l 5, -3 l -5, -3 l 0, 2 l -10, 0' transform='rotate(-45,16.46,-19.18)' />
+                        <path d='M 0, 6.5 l 0,2 l 10,0 l 0, 2 l 5, -3 l -5, -3 l 0, 2 l -10.5, 0' transform='rotate(45,7.85,6.25)' />
+                        <path d='M 0, 6.5 l 0,2 l 10,0 l 0, 2 l 5, -3 l -5, -3 l 0, 2 l -10, 0' transform='rotate(45,-7.68,44.18)' />
+                        <path d='M 0, 6.5 l 0,2 l 10,0 l 0, 2 l 5, -3 l -5, -3 l 0, 2 l -10.5, 0' transform='rotate(135,18,11.5)' />
+                        <path d='M 0, 6.5 l 0,2 l 10,0 l 0, 2 l 5, -3 l -5, -3 l 0, 2 l -10, 0' transform='rotate(135,2.32,17.93)' />
+                        <path d='M 0, 6.5 l 0,2 l 10,0 l 0, 2 l 5, -3 l -5, -3 l 0, 2 l -10.5, 0' transform='rotate(-135,22.18,13.6)' />
+                        <path d='M 0, 6.5 l 0,2 l 10,0 l 0, 2 l 5, -3 l -5, -3 l 0, 2 l -10, 0' transform='rotate(-135,6.47,7.05)' />
+                    </svg>
+
+                    <button id='setting-btn' class="btn-control">Settings</button>
+                    <a id='download-btn' hidden class="btn-control"></a>
+
+                </div>
+
+
+                <div hidden id='settings'>
+                    <select id="image-type">
+                        <option value="jpeg">JPEG</option>
+                        <option value="png">PNG</option>
+                    </select>
+
+                </div>
+            </div>
+
+
+        </div>
+
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="/assets/scripts/script.js"></script>
+</body>
+
+</html>
