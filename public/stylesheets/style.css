@@ -44,6 +44,8 @@ svg:hover {
 }
 
 #fullscreen-btn {
+    position: absolute;
+    right: 10px;
     border: solid thin white;
 }
 
