@@ -12,14 +12,14 @@ const recorder = {
       window.recordedBlobs.push(blob.data)
     }
     window.recorder.onstart = () => {
-      $('#stop').show('slow')
+      $('#stop-btn').show('slow')
       $('#rec').hide('slow')
       $('#pause').show('slow')
       $('#snap-btn').show('slow')
       $('#cam-btn').hide('slow')
     }
     window.recorder.onstop = () => {
-      $('#stop').hide()
+      $('#stop-btn').hide()
 
       $('#pause').attr('fill', '#fff').attr('stroke', '#fff')
 
