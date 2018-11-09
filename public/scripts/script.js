@@ -56,6 +56,7 @@ const stream = {
     $('#cam-btn').html('Hide Cam')
     $('#fullscreen-btn').show('slow')
     $('#rec').show('slow')
+    $('#snap-btn').show('slow')
   },
   disableStream: () => {
     window.stream.getVideoTracks()[0].enabled = false
