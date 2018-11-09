@@ -152,7 +152,7 @@ const application = {
     $('#rec').hide()
     $('#snap-btn').hide()
     $('#fullscreen-btn').hide()
-    $('#stop').hide()
+    $('#stop-btn').hide()
     $('#rec').click(function (e) {
       if (!window.recorder) {
         recorder.init()
