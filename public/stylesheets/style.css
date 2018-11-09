@@ -34,8 +34,8 @@ a:hover, button:hover, svg:hover {
 }
 
 svg:hover {
-    fill: #4ab3ff;
-    stroke: #4ab3ff;
+    fill: blue;
+    stroke: blue;
 }
 
 #rec:hover {

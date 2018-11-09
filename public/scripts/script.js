@@ -1,6 +1,9 @@
 // to do
 
 // add a progressBar
+// allow audio recording
+// add selections for video types and quality
+
 const recorder = {
   init: () => {
     window.recordedBlobs = []
@@ -17,6 +20,7 @@ const recorder = {
     }
     window.recorder.onstop = () => {
       $('#stop').hide()
+
       $('#pause').attr('fill', '#fff').attr('stroke', '#fff')
 
       const url = window.URL.createObjectURL(
@@ -104,6 +108,7 @@ const controls = {
     controls.setupDownloadLink(url, type, 'Image')
   },
   setupDownloadLink: (url, ext, type) => {
+    $('#trash').show('slow')
     $('#download-btn')
       .html(`Save ${type}`)
       .prop('href', url)
@@ -143,6 +148,7 @@ const application = {
     $('#fullscreen-btn').find('path:even').hide()
     $('#pause').hide()
     $('#play').hide()
+    $('#trash').hide()
     $('#rec').hide()
     $('#snap-btn').hide()
     $('#fullscreen-btn').hide()
@@ -156,11 +162,18 @@ const application = {
 
     $('#download-btn').click(function (e) {
       $(this).hide('slow')
+      $('#trash').show('slow')
       $(this).text().includes('Image')
         ? media.backToLiveFromSnap()
         : media.backToLiveFromRec()
     })
-
+    $('#trash').click(function () {
+      $(this).hide('slow')
+      $('#download-btn').hide('slow')
+      $('#download-btn').text().includes('Image')
+        ? media.backToLiveFromSnap()
+        : media.backToLiveFromRec()
+    })
     $('#fullscreen-btn').click(function (e) {
       const video = $('.video')[0]
       if ($(this).attr('fill') === '#fff') {
